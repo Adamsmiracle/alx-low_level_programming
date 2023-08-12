@@ -13,7 +13,7 @@ float c;
 long int d;
 long long int e;
 
-printf("Size of char is: %lu byte(s)\n",(unsigned long)sizeof(a));
+printf("Size of char is: %lu byte(s)\n", (unsigned long)sizeof(a));
 
 printf("Size of int is: %lu byte(s)\n", (unsigned long)sizeof(b));
 
