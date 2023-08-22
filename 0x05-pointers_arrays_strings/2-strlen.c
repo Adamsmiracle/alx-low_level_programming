@@ -2,7 +2,7 @@
 /**
   * _strlen - prints the length of the argument
   * @s: strings whose length is to be calculated
-  * Return: 0 (Success)
+  * Return: length
   */
 
 int _strlen(char *s)
@@ -15,5 +15,5 @@ int _strlen(char *s)
 		n++;
 		s++;
 	}
-	return (0);
+	return (n);
 }
