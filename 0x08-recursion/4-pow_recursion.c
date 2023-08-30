@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-  * pow_recursion - prints the a number to the power another number
+  * _pow_recursion - prints the a number to the power another number
   * @x: number
   * @y: power
   * Return: The answer
   */
 
-int pow_recursion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 		return (-1);
