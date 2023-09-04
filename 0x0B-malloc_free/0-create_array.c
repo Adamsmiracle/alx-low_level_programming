@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	i = 0;
 	if (p == NULL || p == 0)
 	{
-		return (Null);
+		return (NULL);
 	}
 
 	while (i < size)
