@@ -18,6 +18,12 @@ char *str_concat(char *s1, char *s2)
 	while (s1[len1] != '\0')
 		len1++;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
 	len2 = 0;
 	while (s2[len2] != '\0')
 		len2++;
