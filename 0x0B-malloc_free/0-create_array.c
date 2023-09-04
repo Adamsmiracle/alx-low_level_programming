@@ -15,17 +15,15 @@ char *create_array(unsigned int size, char c)
 	p = malloc(sizeof(*p) * size);
 
 	i = 0;
-	if (p)
+	if (p == Null || p == 0)
 	{
-		while (i < size)
-		{
-			p[i] = c;
-			i++;
-		}
+		return (Null);
 	}
-	else
+
+	while (i < size)
 	{
-		return ("failed to allocate memory");
+		p[i] = c;
+		i++;
 	}
 	return (p);
 }
