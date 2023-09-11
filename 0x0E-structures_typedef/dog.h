@@ -1,4 +1,3 @@
-#include <stdio.h>
 #ifndef DOG_H
 #define DOG_H
 
@@ -7,7 +6,7 @@
   * @name: member
   * @owner: member
   * @age: member
-  * 
+  *
   * description
 */
 
@@ -22,7 +21,7 @@ struct dog
  * dog_t - typedef for dog structure
  */
 
-typedef struct dog dog_t
+typedef struct dog dog_t;
 
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
