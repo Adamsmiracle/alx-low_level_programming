@@ -1,13 +1,12 @@
 #include <stdio.h>
-
 /**
-  * dog - structure about the details of a dog
+  * struct dog - structure about the details of a dog
   * @name: member
   * @owner: member
   * @age: member
 */
 
-struct dog 
+struct dog
 {
 	char *name;
 	char *owner;
