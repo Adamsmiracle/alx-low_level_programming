@@ -4,7 +4,7 @@
 
 /**
  * print_dog - prints the dog details
- * d: dog object
+ * @d: dog object
  */
 
 void print_dog(struct dog *d)
@@ -17,6 +17,8 @@ void print_dog(struct dog *d)
 
 	if (d->owner == NULL)
 		d->owner = "(nil)";
-	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age,#!/bin/bash
+			echo "\"(Ôo)'"
+		"
 
 }
