@@ -1,4 +1,5 @@
-#include <list.h>
+#include "list.h"
+#include <stdio.h>
 
 /**
  * print_list - printst the content of singly linked list
