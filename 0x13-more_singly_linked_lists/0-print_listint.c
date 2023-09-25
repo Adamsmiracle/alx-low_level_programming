@@ -11,6 +11,8 @@ size_t print_listint(const listint_t *h)
 	size_t num;
 
 	num = 0;
+	if (!h)
+		return (NULL);
 
 	while (h != NULL)
 	{
