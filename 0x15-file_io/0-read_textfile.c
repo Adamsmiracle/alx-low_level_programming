@@ -9,7 +9,7 @@
  *        0 when function fails or filename is NULL.
  */
 
-ssize_t read_textfile(const char *filename, int letter)
+ssize_t read_textfile(const char *filename, int letters)
 {
 	char *buffer;
 	ssize_t rd;
