@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #include "main.h"
 #include <string.h>
 /**
@@ -12,6 +5,7 @@
   * @s: input
   * @b: input
   * @n: input
+  * Return: address if s
   */
 
 char *_memset(char *s, char b, unsigned int n)

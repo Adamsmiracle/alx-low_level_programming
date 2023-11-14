@@ -2,7 +2,7 @@
 
 /**
   * _islower - checks if the character is lower or not
-  * @c - the character to be checked
+  * @c: the character to be checked
   * Return: 1 if the character is lower and 0 if not
   */
 
@@ -12,7 +12,7 @@ int _islower(int c)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
