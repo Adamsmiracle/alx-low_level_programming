@@ -2,7 +2,7 @@
 
 /**
  * key_index - gets index for a key given
- * @key: key 
+ * @key: key
  * @size: size of the table
  *
  * Return: size of key
