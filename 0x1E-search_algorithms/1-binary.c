@@ -56,12 +56,12 @@ void print_array(int *array, size_t low, size_t high)
 
 	for (i = low; i < high; i++)
 	{
-		if (i == high -1)
+		if (i == high - 1)
 		{
 			printf(" %d", array[i]);
 		}
 
-		else 
+		else
 		{
 			printf(" %d,", array[i]);
 		}
