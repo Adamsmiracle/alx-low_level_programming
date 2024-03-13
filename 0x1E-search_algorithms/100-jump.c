@@ -13,7 +13,7 @@ size_t min(size_t a, size_t b)
 }
 
 /**
- * jump_search - Implemeation of the jump search algorithm 
+ * jump_search - Implemeation of the jump search algorithm
  * jump search algorithm
  * @array: the array to traverse
  * @size: size of the array
