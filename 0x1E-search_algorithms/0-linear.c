@@ -1,29 +1,31 @@
-#include <stdlib.h>
 #include "search_algos.h"
+
+
 /**
- * linear_search - sequential search algorithm
- * @array: the data structure
- * @size: the size of the the array
- * @value: the key to search for
- * Return: The position of the values, else none
+ * linear_search - finds an element in a list by by ever element
+ * with the key
+ * @array: pointer to the array to find
+ * @size: size of the array
+ * @value: the value to find
+ * Return: The index of the value if present else -1
  */
+
 
 int linear_search(int *array, size_t size, int value)
 {
-	size_t i;
+	size_t j;
 
 	if (array == NULL)
 		return (-1);
 
-	for (i = 0; i < size; i++)
+	for (j = 0; j < size; j++)
 	{
-		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-
-		if (array[i] == value)
-			return (i);
-
+		printf("Value checked array[%ld] = [%d]\n", j, array[j]);
+		if (array[j] == value)
+		{
+			return (j);
+		}
 	}
 
 	return (-1);
 }
-
