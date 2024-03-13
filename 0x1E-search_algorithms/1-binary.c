@@ -56,7 +56,15 @@ void print_array(int *array, size_t low, size_t high)
 
 	for (i = low; i < high; i++)
 	{
-		printf("%d, ", array[i]);
+		if (i == high -1)
+		{
+			printf(" %d", array[i]);
+		}
+
+		else 
+		{
+			printf(" %d,", array[i]);
+		}
 	}
 
 	printf("\n");
