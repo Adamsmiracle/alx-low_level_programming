@@ -1,13 +1,48 @@
-#include <stdio.h>
 #include "search_algos.h"
 
+
+
+
+
+
+
 /**
- * binary_search - searches a sorted array
- * @array: the array of date
- * @size: the number of elements in the array
- * @value: the value being searched for
- * Return: the position of the array
+ * print_array - Prints the elements of an array
+ * @array: The array to print
+ * @low: The index to start print from
+ * @high: the Index to end printing
+ * Return: void
  */
+void print_array(int *array, size_t low, size_t high)
+{
+	size_t j;
+
+	printf("Searching in array:");
+
+	for (j = low; j < high; j++)
+	{
+		if (j == high - 1)
+		{
+			printf(" %d", array[j]);
+		}
+		else
+		{
+			printf(" %d,",array[j]);
+		}
+	}
+
+	printf("\n");
+}
+
+/**
+ * binary_search - performs a biney search for an element
+ * in an array
+ * @array: array to search for element
+ * @size: soze fo the array
+ * @value: key or value to search for
+ * Return: the index of value if present else -1
+ */
+
 
 int binary_search(int *array, size_t size, int value)
 {
@@ -15,57 +50,27 @@ int binary_search(int *array, size_t size, int value)
 	size_t high = size - 1;
 	size_t midpoint = (high - low) / size;
 
-	while (low <= high)
+
+	while (low <=  high)
 	{
 		midpoint = ((high + low) / (2));
 		print_array(array, low, high + 1);
 
 		if (array[midpoint] < value)
 		{
+			/*print_array(array, low, high + 1);*/
 			low = midpoint + 1;
+			/* print_array(array, low, high + 1); */
 		}
-
-		if (array[midpoint] > value)
+		else if (array[midpoint] > value)
 		{
+			/*print_array(array, low, high + 1);*/
 			high = midpoint - 1;
+			/* print_array(array, low, high + 1); */
 		}
-
 		else if (array[midpoint] == value)
-		{
 			return (midpoint);
-		}
-	}
 
+		}
 	return (-1);
-}
-
-/**
- * print_array - print the array to the standard output
- * @array: the input array
- * @low: the index of the lowest element
- * @high: index of the highest element
- * Return: void
- */
-
-void print_array(int *array, size_t low, size_t high)
-{
-	size_t i;
-
-
-	printf("Searching in array: ");
-
-	for (i = low; i < high; i++)
-	{
-		if (i == high - 1)
-		{
-			printf(" %d", array[i]);
-		}
-
-		else
-		{
-			printf(" %d,", array[i]);
-		}
-	}
-
-	printf("\n");
 }
