@@ -1,76 +1,61 @@
 #include "search_algos.h"
 
-
-
-
-
-
-
 /**
- * print_array - Prints the elements of an array
- * @array: The array to print
- * @low: The index to start print from
- * @high: the Index to end printing
- * Return: void
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
+ *
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-void print_array(int *array, size_t low, size_t high)
+int recursive_search(int *array, size_t size, int value)
 {
-	size_t j;
+	size_t half = size / 2;
+	size_t i;
 
-	printf("Searching in array:");
+	if (array == NULL || size == 0)
+		return (-1);
 
-	for (j = low; j < high; j++)
-	{
-		if (j == high - 1)
-		{
-			printf(" %d", array[j]);
-		}
-		else
-		{
-			printf(" %d,",array[j]);
-		}
-	}
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
 
 	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
+		return ((int)half);
+
+	if (value < array[half])
+		return (recursive_search(array, half, value));
+
+	half++;
+
+	return (recursive_search(array + half, size - half, value) + half);
 }
 
 /**
- * binary_search - performs a biney search for an element
- * in an array
- * @array: array to search for element
- * @size: soze fo the array
- * @value: key or value to search for
- * Return: the index of value if present else -1
+ * binary_search - calls to binary_search to return
+ * the index of the number
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
-
 int binary_search(int *array, size_t size, int value)
 {
-	size_t low = 0;
-	size_t high = size - 1;
-	size_t midpoint = (high - low) / size;
+	int index;
 
+	index = recursive_search(array, size, value);
 
-	while (low <=  high)
-	{
-		midpoint = ((high + low) / (2));
-		print_array(array, low, high + 1);
+	if (index >= 0 && array[index] != value)
+		return (-1);
 
-		if (array[midpoint] < value)
-		{
-			/*print_array(array, low, high + 1);*/
-			low = midpoint + 1;
-			/* print_array(array, low, high + 1); */
-		}
-		else if (array[midpoint] > value)
-		{
-			/*print_array(array, low, high + 1);*/
-			high = midpoint - 1;
-			/* print_array(array, low, high + 1); */
-		}
-		else if (array[midpoint] == value)
-			return (midpoint);
-
-		}
-	return (-1);
+	return (index);
 }
